@@ -1,26 +1,13 @@
-myArray = [];
 
-function range (start, end, step){
-  var i = start
-  if (start>end){
-    return myArray
-  } else if (step < 0){
-    return myArray
-
-
-  while (i <= end){
-  myArray.push(i)
-  i += step
+function range(start, end, step){
+  var myArray = [];
+  if (step < 0) {
+    return myArray;
   }
+  for (start; start <= end; start += step) {
+    myArray.push(start);
+  }
+  return myArray;
 }
-}
-
-range(10,30,7)
-console.log(myArray)
-
-
-
-
-  /*if (start || end || step === undefined){
-    return newArray[];
-  }*/
+console.log(range(2,40,9));
+console.log(range(4,35,-1));
